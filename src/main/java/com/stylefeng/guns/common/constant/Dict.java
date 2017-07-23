@@ -43,4 +43,9 @@ public interface Dict {
      */
     String NoticeMap = "NoticeMap";
 
+    /**
+     * 工资业务的字典
+     */
+    String SalaryMap = "SalaryMap";
+
 }
