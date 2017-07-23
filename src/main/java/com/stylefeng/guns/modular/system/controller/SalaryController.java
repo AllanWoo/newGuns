@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Map;
 
@@ -108,7 +109,9 @@ public class SalaryController extends BaseController {
      */
     @RequestMapping(value = "/update")
     @ResponseBody
-    public Object update() {
+    public Tip update(@Valid Salary salary) {
+        this.salaryMapper.updateById(salary);
+
         return super.SUCCESS_TIP;
     }
 
